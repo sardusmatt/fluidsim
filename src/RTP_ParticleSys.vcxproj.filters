@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Utils.cpp">
+      <Filter>.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="lodepng.cpp">
+      <Filter>.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="MathAux.cpp">
+      <Filter>.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="textfile.cpp">
+      <Filter>.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="OBJLoader.cpp">
+      <Filter>.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="AviFile.cpp">
+      <Filter>.cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="Solver.cpp">
+      <Filter>.cpp</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Camera.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="lodepng.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="MathAux.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Color.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="textfile.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Main.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="OBJLoader.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="AviFile.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="GLToMovie.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+    <ClInclude Include="Solver.h">
+      <Filter>.h</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include=".h">
+      <UniqueIdentifier>{b8c0ed19-7d2f-40b3-a98d-ec24cfabee1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include=".cpp">
+      <UniqueIdentifier>{362917c2-fc89-48a2-901b-dac1fa99a0fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="shaders">
+      <UniqueIdentifier>{d2031345-f3ea-4c7d-9d2e-37b134378d93}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\shaders\colour.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\shaders\colour.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\shaders\flatten.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\shaders\flatten.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\shaders\wave.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\shaders\wave.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\shaders\toon1.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\shaders\toon1.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\shaders\toon2.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\shaders\toon2.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\shaders\toon3.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\shaders\toon3.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\shaders\minnaert.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\shaders\minnaert.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\shaders\refraction.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\shaders\refraction.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\shaders\chromatic.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\shaders\chromatic.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\shaders\fresnel.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\shaders\fresnel.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\shaders\minnaertwardschlick.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\shaders\minnaertwardschlick.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\shaders\normapping.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\shaders\normapping.vert">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\shaders\fluidDensity.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="..\shaders\fluidDensity.vert">
+      <Filter>shaders</Filter>
+    </None>
+  </ItemGroup>
+</Project>

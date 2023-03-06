@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{65E12660-A19D-470C-A9CC-132D40253B42}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Rta</RootNamespace>
+    <ProjectName>RTP_StableFluids</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>..\include;$(IncludePath)</IncludePath>
+    <LibraryPath>..\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>..\include;$(IncludePath)</IncludePath>
+    <LibraryPath>..\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>vfw32.lib;glew32.lib;glut32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>vfw32.lib;glew32.lib;glut32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AviFile.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="lodepng.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="OBJLoader.cpp" />
+    <ClCompile Include="MathAux.cpp" />
+    <ClCompile Include="Solver.cpp" />
+    <ClCompile Include="textfile.cpp" />
+    <ClCompile Include="Utils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AviFile.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="Color.h" />
+    <ClInclude Include="GLToMovie.h" />
+    <ClInclude Include="lodepng.h" />
+    <ClInclude Include="Main.h" />
+    <ClInclude Include="MathAux.h" />
+    <ClInclude Include="Model.h" />
+    <ClInclude Include="OBJLoader.h" />
+    <ClInclude Include="Solver.h" />
+    <ClInclude Include="textfile.h" />
+    <ClInclude Include="Utils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\shaders\chromatic.frag" />
+    <None Include="..\shaders\chromatic.vert" />
+    <None Include="..\shaders\fresnel.frag" />
+    <None Include="..\shaders\fresnel.vert" />
+    <None Include="..\shaders\minnaert.frag" />
+    <None Include="..\shaders\minnaert.vert" />
+    <None Include="..\shaders\minnaertwardschlick.frag" />
+    <None Include="..\shaders\minnaertwardschlick.vert" />
+    <None Include="..\shaders\normapping.frag" />
+    <None Include="..\shaders\normapping.vert" />
+    <None Include="..\shaders\fluidDensity.vert" />
+    <None Include="..\shaders\colour.frag" />
+    <None Include="..\shaders\colour.vert" />
+    <None Include="..\shaders\flatten.frag" />
+    <None Include="..\shaders\flatten.vert" />
+    <None Include="..\shaders\fluidDensity.frag" />
+    <None Include="..\shaders\refraction.frag" />
+    <None Include="..\shaders\refraction.vert" />
+    <None Include="..\shaders\toon1.frag" />
+    <None Include="..\shaders\toon1.vert" />
+    <None Include="..\shaders\toon2.frag" />
+    <None Include="..\shaders\toon2.vert" />
+    <None Include="..\shaders\toon3.frag" />
+    <None Include="..\shaders\toon3.vert" />
+    <None Include="..\shaders\wave.frag" />
+    <None Include="..\shaders\wave.vert" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

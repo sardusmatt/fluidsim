@@ -1,0 +1,31 @@
+uniform float reta, beta, geta;
+uniform float fresnelPower;
+varying vec3 Reflect;
+varying vec3 RefractR;
+varying vec3 RefractG;
+varying vec3 RefractB;
+varying float Ratio;
+void main() {
+	float avgEta = (reta + geta + beta) / 3.0;
+	float F = ((1.0-avgEta) * (1.0-avgEta)) / ((1.0+avgEta) * (1.0+avgEta));
+	vec4 ecPosition = gl_ModelViewMatrix * gl_Vertex;
+	vec3 ecPosition3 = ecPosition.xyz / ecPosition.w;
+	vec3 i = normalize(ecPosition3);
+	vec3 n = normalize(gl_NormalMatrix * gl_Normal);
+	Ratio = F + (1.0 - F) * pow((1.0 - dot(-i, n)), fresnelPower);
+	RefractR = refract(i, n, reta);
+	RefractR.x = - RefractR.x;
+	RefractR.y = - RefractR.y;
+	RefractR = vec3(gl_TextureMatrix[0] * vec4(RefractR, 1.0));
+	RefractG = refract(i, n, geta);
+	RefractG.x = - RefractG.x;
+	RefractG.y = - RefractG.y;
+	RefractG = vec3(gl_TextureMatrix[0] * vec4(RefractG, 1.0));
+	RefractB = refract(i, n, beta);
+	RefractB.x = - RefractB.x;
+	RefractB.y = - RefractB.y;
+	RefractB = vec3(gl_TextureMatrix[0] * vec4(RefractB, 1.0));
+	Reflect = reflect(i, n);
+	Reflect = vec3(gl_TextureMatrix[0] * vec4(Reflect, 1.0));
+	gl_Position = ftransform();
+}
